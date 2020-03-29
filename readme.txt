@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat March 28 19:07:05 2020
-modificado para ver si sube
+modificado para ver si baja
 
 ########################
 ## VersiÃ³n: 0.1.0 
