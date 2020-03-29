@@ -1,5 +1,5 @@
 package Main;
-
+import ;
 import com.panamahitek.ArduinoException;
 import com.panamahitek.PanamaHitek_Arduino;
 import java.util.logging.Level;
@@ -10,7 +10,7 @@ import jssc.SerialPortException;
 
 public class Arduino_conector {
 
-	// Se crea una instancia de la librería PanamaHitek_Arduino
+	// Se crea una instancia de la librerÃ­a PanamaHitek_Arduino
 	private static PanamaHitek_Arduino ino = new PanamaHitek_Arduino();
 	private static final SerialPortEventListener listener = new SerialPortEventListener() {
 		@Override
@@ -29,7 +29,7 @@ public class Arduino_conector {
 	// listener para el arduino
 	public static void arduino_initCOM_Send() {
 		try {
-			ino.arduinoRXTX("COM4", 9600, listener); // se inicia comunicación con el puerto serie
+			ino.arduinoRXTX("COM4", 9600, listener); // se inicia comunicaciÃ³n con el puerto serie
 		} catch (ArduinoException ex) {
 			Logger.getLogger(Arduino_conector.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -38,7 +38,7 @@ public class Arduino_conector {
 	// listener para el arduino
 	public static void arduino_initCOM_Receipt() {
 		try {
-			ino.arduinoRX("COM3", 9600, listener); // se inicia comunicación con el puerto serie
+			ino.arduinoRX("COM3", 9600, listener); // se inicia comunicaciÃ³n con el puerto serie
 		} catch (ArduinoException | SerialPortException ex) {
 			Logger.getLogger(Arduino_conector.class.getName()).log(Level.SEVERE, null, ex);
 		}
@@ -56,7 +56,7 @@ public class Arduino_conector {
 
 	// enciende led
 	public static void encender_Arduino() {
-		// se hace el envío del string "1"
+		// se hace el envÃ­o del string "1"
 		try {
 			ino.sendData("1");
 		} catch (ArduinoException | SerialPortException ex) {
@@ -67,7 +67,7 @@ public class Arduino_conector {
 
 	// apaga led
 	public static void apagar_Arduino() {
-		// se hace el envío del string "0"
+		// se hace el envÃ­o del string "0"
 		try {
 			ino.sendData("0");
 		} catch (ArduinoException | SerialPortException ex) {
